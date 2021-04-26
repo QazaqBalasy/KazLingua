@@ -15,15 +15,19 @@ class ModuleViewController: UIViewController{
     @IBOutlet weak var progressBar: UIProgressView!
     
     private let questionPic:QuestionPictureViewController
+    private let tController:TextViewController
     
     init() {
         self.questionPic = QuestionPictureViewController()
+        self.tController = TextViewController()
         super.init(nibName: nil, bundle: nil)
+        
         
     }
     
     required init?(coder a: NSCoder) {
         self.questionPic = QuestionPictureViewController()
+        self.tController = TextViewController()
         super.init(coder: a)
         //fatalError("init(coder:) has not been implemented")
     }
@@ -36,7 +40,13 @@ class ModuleViewController: UIViewController{
             width: self.containerView.frame.width,
             height: self.containerView.frame.height
         )
-        self.containerView.addSubview(questionPic.view)
+        self.tController.view.frame = CGRect(
+            x: 0,
+            y: 0,
+            width: self.containerView.frame.width,
+            height: self.containerView.frame.height
+        )
+        self.containerView.addSubview(tController.view)
         
         // Do any additional setup after loading the view.
     }

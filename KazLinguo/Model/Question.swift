@@ -13,6 +13,7 @@ class Question {
     var answer:String = ""
     let rightAnswer:String
     
+    
     init(question:String,answer:String,rightAnswer:String) {
         self.question = question
         self.answer = answer

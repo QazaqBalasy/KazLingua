@@ -16,8 +16,9 @@ class QuestionPictureViewController: UIViewController {
     @IBOutlet weak var b2: UIButton!
     @IBOutlet weak var b3: UIButton!
     @IBOutlet weak var b4: UIButton!
+    @IBOutlet weak var imageV: UIImageView!
     
-    @IBOutlet weak var label: UILabel!
+    //@IBOutlet weak var label: UILabel!
     
     @IBAction func button1(_ sender: UIButton) {
         delegate?.didAnswered(answer: "1")
@@ -38,29 +39,49 @@ class QuestionPictureViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        //imageV.image = UIImage.init(named: "img4")
+        //setAttributes()
         // Do any additional setup after loading the view.
     }
+    
+//    override func viewDidAppear(_ animated: Bool) {
+//        super.viewDidAppear(false)
+//        
+//    }
 
-    func setAttributes(image1:UIImage,image2:UIImage,image3:UIImage,image4:UIImage,questionLabel:UILabel) {
-        b1.setBackgroundImage(image1, for: UIControl.State.normal)
-        b2.setBackgroundImage(image2, for: UIControl.State.normal)
-        b3.setBackgroundImage(image3, for: UIControl.State.normal)
-        b4.setBackgroundImage(image4, for: UIControl.State.normal)
-        label = questionLabel
+    func setAttributes(img1:String,img2:String,img3:String,img4:String) {
+        b1.setImage(UIImage.init(named: img1), for: UIControl.State.normal)
+        b2.setImage(UIImage.init(named: img2), for: UIControl.State.normal)
+        b3.setImage(UIImage.init(named: img3), for: UIControl.State.normal)
+        b4.setImage(UIImage.init(named: img4), for: UIControl.State.normal)
         
+        //label = questionLabel
+    }
+    
+    
+    func setAttributes()  {
+        //imageV.image = UIImage.init(named: "img4")
+//        b1.setImage(UIImage.init(named: "img1"), for: UIControl.State.normal)
+//               b2.setImage(UIImage.init(named: "img2"), for: UIControl.State.normal)
+//               b3.setImage(UIImage.init(named: "img3"), for: UIControl.State.normal)
+//               b4.setImage(UIImage.init(named: "img4"), for: UIControl.State.normal)
         
     }
     
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    
 }
+
+//extension UIImage {
+//    // Instantiates a `UIImage` from the `ImageName` provided
+//    convenience init(named imageName: ImageName) {
+//        self.init(named: imageName.rawValue)!
+//    }
+//    
+//    enum ImageName: String {
+//        case imageName = "ImageName"
+//        case anotherImage = "Image2"
+//    }
+//}
+
+

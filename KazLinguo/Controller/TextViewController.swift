@@ -9,34 +9,38 @@
 import UIKit
 
 class TextViewController: UIViewController {
+    
     @IBOutlet weak var tCollectionView: UICollectionView!{
         didSet{
             tCollectionView.dataSource = self
             tCollectionView.delegate = self
             let nib = UINib(nibName: "TextCollectionViewCell", bundle: nil)
             tCollectionView.register(nib, forCellWithReuseIdentifier: "TextCollectionViewCell")
-//            tCollectionView.register(TextCollectionViewCell.self,forCellWithReuseIdentifier: "TextCollectionViewCell")
             //tCollectionView.collectionViewLayout = LeftAlignedCollectionViewFlowLayout()
         }
     }
+    
     var l1:[String] = ["One"]
     var l2 = ["One","Two","Three","One","Two","Three","One","Two","Three","One","Two","Three"]
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        
+            QuestionManager.parseJSON()
     }
 
 }
 
+
+
 //MARK: - Implement Collection View delegates
 extension TextViewController:UICollectionViewDelegate,UICollectionViewDataSource{
+    
     //count of sections
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 2;
     }
+    
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if(section == 0){
             return l1.count
@@ -44,22 +48,23 @@ extension TextViewController:UICollectionViewDelegate,UICollectionViewDataSource
             return l2.count
         }
     }
+    
+    
     //"reuse" cells
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TextCollectionViewCell", for: indexPath)
         
         if let viewCell = cell as? TextCollectionViewCell{
             if(indexPath.section == 0){
-                print(indexPath.item)
                 viewCell.label.text = l1[indexPath.item]
                 
             }else {
-                print("second %f",indexPath.item)
                 viewCell.label.text = l2[indexPath.item]
             }
         }
         return cell
     }
+    
     
     //move a selected item
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -77,6 +82,7 @@ extension TextViewController:UICollectionViewDelegate,UICollectionViewDataSource
             })
         }
     }
+    
     
     //margin , padding etc
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {

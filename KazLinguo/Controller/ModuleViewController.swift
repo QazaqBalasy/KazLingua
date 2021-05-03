@@ -16,6 +16,9 @@ class ModuleViewController: UIViewController{
     
     private let questionPic:QuestionPictureViewController
     private let tController:TextViewController
+    //private let q = QuestionPictureViewController()
+    var questions = QuestionManager.getQuestions()
+    private var counter:Int = 0
     
     init() {
         self.questionPic = QuestionPictureViewController()
@@ -34,21 +37,12 @@ class ModuleViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.questionPic.view.frame = CGRect(
-            x: 0,
-            y: 0,
-            width: self.containerView.frame.width,
-            height: self.containerView.frame.height
-        )
-        self.tController.view.frame = CGRect(
-            x: 0,
-            y: 0,
-            width: self.containerView.frame.width,
-            height: self.containerView.frame.height
-        )
-        self.containerView.addSubview(tController.view)
-        
-        // Do any additional setup after loading the view.
+        if let questions = questions{
+            //print("type",questions[counter].type)
+            loadSubviews(type:questions[counter].type)
+        }
+
+
     }
     
     @IBAction func closeButton(_ sender: Any) {
@@ -56,8 +50,55 @@ class ModuleViewController: UIViewController{
     }
     
     @IBAction func nextButton(_ sender: Any) {
+        counter+=1
+        if let questions = questions{
+            loadSubviews(type:questions[counter].type)
+        }
+    }
+    
+    
+    func loadSubviews(type:Int){
+        let frame = CGRect(
+            x: 0,
+            y: 0,
+            width: self.containerView.frame.width,
+            height: self.containerView.frame.height
+        )
+        if let questions = questions{
+            if(type == 1){
+                //                //print("a"
+                //                //print("type")
+                //                print(questions[counter])
+                if(questionPic.isViewLoaded){
+                    DispatchQueue.main.async {
+                        self.questionPic.setAttributes(
+                            img1: questions[self.counter].answer,
+                            img2: questions[self.counter].variant[0],
+                            img3: questions[self.counter].variant[1],
+                            img4: questions[self.counter].variant[2]
+                        )
+                    }
+                    
+                }
+                self.questionPic.view.frame = frame
+                self.containerView.addSubview(questionPic.view)
+            }else if(type == 2){
+                //print("b")
+                tController.l1 = [questions[counter].answer]
+                tController.l2 = questions[counter].variant
+                self.tController.view.frame = frame
+                self.containerView.addSubview(tController.view)
+            }
+        }
         
     }
+    
+    
+    func insertSubview() {
+        self.containerView.addSubview(tController.view)
+    }
+    
+    
     
     
 }
@@ -70,4 +111,4 @@ extension ModuleViewController:AnswerDelegate{
     }
     
       
-  }
+}

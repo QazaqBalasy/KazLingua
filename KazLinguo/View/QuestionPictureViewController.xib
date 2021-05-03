@@ -13,7 +13,7 @@
                 <outlet property="b2" destination="MLw-8J-UWf" id="9Dz-5v-5UP"/>
                 <outlet property="b3" destination="cww-SV-p6X" id="IO3-Ic-hAv"/>
                 <outlet property="b4" destination="eq5-cT-zE6" id="bPc-PC-r8L"/>
-                <outlet property="label" destination="YxM-jO-JSR" id="crj-Xj-USC"/>
+                <outlet property="imageV" destination="m68-zR-r1R" id="zi4-zb-oDN"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -31,7 +31,6 @@
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="QSy-oi-STh">
                                     <rect key="frame" x="0.0" y="0.0" width="167" height="130"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <state key="normal" backgroundImage="square.and.arrow.down" catalog="system"/>
                                     <connections>
                                         <action selector="button1:" destination="-1" eventType="touchUpInside" id="umY-9v-qeo"/>
                                     </connections>
@@ -69,20 +68,16 @@
                         <constraint firstAttribute="height" constant="300" id="UbG-N8-byf"/>
                     </constraints>
                 </stackView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kalam - Pencil" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YxM-jO-JSR">
-                    <rect key="frame" x="152.5" y="211.5" width="109.5" height="20.5"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m68-zR-r1R">
+                    <rect key="frame" x="87" y="590" width="240" height="128"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="NAt-cp-7ux" secondAttribute="bottom" constant="280" id="FPj-KO-SCw"/>
                 <constraint firstAttribute="trailing" secondItem="NAt-cp-7ux" secondAttribute="trailing" constant="20" id="Jv3-qF-Orb"/>
                 <constraint firstItem="NAt-cp-7ux" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="QDq-q6-Lx7"/>
-                <constraint firstItem="YxM-jO-JSR" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="qJG-Fj-wuE"/>
-                <constraint firstItem="NAt-cp-7ux" firstAttribute="top" secondItem="YxM-jO-JSR" secondAttribute="bottom" constant="50" id="s7n-Ww-Qq3"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="137.68115942028987" y="144.64285714285714"/>
@@ -90,7 +85,6 @@
     </objects>
     <resources>
         <image name="folder.fill.badge.minus" catalog="system" width="64" height="42"/>
-        <image name="square.and.arrow.down" catalog="system" width="60" height="64"/>
         <image name="square.and.arrow.up.fill" catalog="system" width="56" height="64"/>
         <image name="square.and.pencil" catalog="system" width="64" height="58"/>
     </resources>

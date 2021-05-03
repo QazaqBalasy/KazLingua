@@ -1,0 +1,36 @@
+{
+    "question":[
+    {
+        "type":2,
+        "q":"Translate the sentenece",
+        "answer":"Forca Barca",
+        "variant":["Hala Barca Madrid Forca",],
+    },
+    {
+        "type":2,
+        "q":"Translate the sentenece",
+        "answer":"Menin atym John",
+        "variant":["My You Is John Are Name",],
+    },
+    {
+        "type":1,
+        "q":"Choose a right picture",
+        "answer":"img3",
+        "variant":[
+            "img1",
+            "img5",
+            "img4",
+        ],
+    },
+    {
+        "type":1,
+        "q":"Choose a right picture",
+        "answer":"img2",
+        "variant":[
+            "img1",
+            "img3",
+            "img5",
+        ]
+    },
+    ]
+}

@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol AnswerDelegate {
+protocol Answerable {
     
-    func didAnswered(answer:String)
+    func getAnswer() -> String
 }

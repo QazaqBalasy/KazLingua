@@ -24,8 +24,6 @@ class QuestionManager{
     }
     
     
-    
-    
     private static func readLocalFile(forName name: String) -> Data? {
         do {
             if let bundlePath = Bundle.main.path(forResource: name,
@@ -43,12 +41,10 @@ class QuestionManager{
     
     static func getQuestions() -> [QuestionModel]?{
         if let questions = parseJSON(){
-            print(questions.capacity)
             var questionModel:[QuestionModel] = []
             for q in questions{
-                var element = QuestionModel(type: q.type,q: q.q,answer: q.answer,variant: q.variant)
+                let element = QuestionModel(type: q.type,problem: q.problem,phrase: q.phrase,answer: q.answer,variant: q.variant)
                 questionModel.append(element)
-                print(questionModel.capacity)
             }
             return questionModel
         }

@@ -8,7 +8,8 @@
 
 import UIKit
 
-class TextViewController: UIViewController {
+class TextViewController: UIViewController,Answerable {
+    
     
     @IBOutlet weak var tCollectionView: UICollectionView!{
         didSet{
@@ -19,16 +20,24 @@ class TextViewController: UIViewController {
             //tCollectionView.collectionViewLayout = LeftAlignedCollectionViewFlowLayout()
         }
     }
+    @IBOutlet weak var phraseLabel: UILabel!
     
+    var phrase = ""
     var l1:[String] = ["One"]
     var l2 = ["One","Two","Three","One","Two","Three","One","Two","Three","One","Two","Three"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-            QuestionManager.parseJSON()
+        phraseLabel.text = phrase
+    }
+    
+    
+    func getAnswer() -> String {
+        return l1.joined(separator: " ")
     }
 
 }
+
 
 
 
@@ -40,7 +49,7 @@ extension TextViewController:UICollectionViewDelegate,UICollectionViewDataSource
         return 2;
     }
     
-    
+    //return number of items in sections
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if(section == 0){
             return l1.count
@@ -66,7 +75,7 @@ extension TextViewController:UICollectionViewDelegate,UICollectionViewDataSource
     }
     
     
-    //move a selected item
+    //move selected item
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if(indexPath.section == 0){
             collectionView.performBatchUpdates({

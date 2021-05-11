@@ -13,7 +13,7 @@
                 <outlet property="b2" destination="MLw-8J-UWf" id="9Dz-5v-5UP"/>
                 <outlet property="b3" destination="cww-SV-p6X" id="IO3-Ic-hAv"/>
                 <outlet property="b4" destination="eq5-cT-zE6" id="bPc-PC-r8L"/>
-                <outlet property="imageV" destination="m68-zR-r1R" id="zi4-zb-oDN"/>
+                <outlet property="phraseLabel" destination="o7p-d4-ODr" id="7Vj-l9-5r2"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -22,8 +22,8 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="NAt-cp-7ux">
-                    <rect key="frame" x="20" y="282" width="374" height="300"/>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="NAt-cp-7ux" userLabel="Main Stack">
+                    <rect key="frame" x="20" y="298" width="374" height="300"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="MCy-ow-a83">
                             <rect key="frame" x="0.0" y="0.0" width="374" height="130"/>
@@ -35,9 +35,8 @@
                                         <action selector="button1:" destination="-1" eventType="touchUpInside" id="umY-9v-qeo"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MLw-8J-UWf">
-                                    <rect key="frame" x="207" y="-1" width="167" height="131"/>
-                                    <state key="normal" backgroundImage="square.and.arrow.up.fill" catalog="system"/>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MLw-8J-UWf">
+                                    <rect key="frame" x="207" y="0.0" width="167" height="130"/>
                                     <connections>
                                         <action selector="button2:" destination="-1" eventType="touchUpInside" id="e2n-HF-Wue"/>
                                     </connections>
@@ -47,16 +46,14 @@
                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="ve3-hI-mZy">
                             <rect key="frame" x="0.0" y="170" width="374" height="130"/>
                             <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cww-SV-p6X">
-                                    <rect key="frame" x="0.0" y="-0.5" width="167" height="129"/>
-                                    <state key="normal" backgroundImage="square.and.pencil" catalog="system"/>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cww-SV-p6X">
+                                    <rect key="frame" x="0.0" y="0.0" width="167" height="130"/>
                                     <connections>
                                         <action selector="button3:" destination="-1" eventType="touchUpInside" id="qvq-g3-sTy"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eq5-cT-zE6">
-                                    <rect key="frame" x="207" y="0.5" width="167" height="128"/>
-                                    <state key="normal" backgroundImage="folder.fill.badge.minus" catalog="system"/>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eq5-cT-zE6">
+                                    <rect key="frame" x="207" y="0.0" width="167" height="130"/>
                                     <connections>
                                         <action selector="button4:" destination="-1" eventType="touchUpInside" id="Ly3-aq-qmb"/>
                                     </connections>
@@ -64,28 +61,23 @@
                             </subviews>
                         </stackView>
                     </subviews>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="300" id="UbG-N8-byf"/>
-                    </constraints>
                 </stackView>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m68-zR-r1R">
-                    <rect key="frame" x="87" y="590" width="240" height="128"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o7p-d4-ODr">
+                    <rect key="frame" x="186" y="257.5" width="42" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="NAt-cp-7ux" secondAttribute="bottom" constant="280" id="FPj-KO-SCw"/>
-                <constraint firstAttribute="trailing" secondItem="NAt-cp-7ux" secondAttribute="trailing" constant="20" id="Jv3-qF-Orb"/>
-                <constraint firstItem="NAt-cp-7ux" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="QDq-q6-Lx7"/>
+                <constraint firstItem="NAt-cp-7ux" firstAttribute="top" secondItem="o7p-d4-ODr" secondAttribute="bottom" constant="20" id="DkC-cf-1ds"/>
+                <constraint firstItem="NAt-cp-7ux" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="k4r-M9-8DL"/>
+                <constraint firstItem="o7p-d4-ODr" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="wAF-zf-4nd"/>
+                <constraint firstItem="NAt-cp-7ux" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="xxd-xJ-4Qv"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="137.68115942028987" y="144.64285714285714"/>
         </view>
     </objects>
-    <resources>
-        <image name="folder.fill.badge.minus" catalog="system" width="64" height="42"/>
-        <image name="square.and.arrow.up.fill" catalog="system" width="56" height="64"/>
-        <image name="square.and.pencil" catalog="system" width="64" height="58"/>
-    </resources>
 </document>

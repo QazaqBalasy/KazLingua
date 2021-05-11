@@ -2,19 +2,15 @@
     "question":[
     {
         "type":2,
-        "q":"Translate the sentenece",
+        "problem":"Translate the sentenece",
+        "phrase":"Alga Barca",
         "answer":"Forca Barca",
-        "variant":["Hala Barca Madrid Forca",],
-    },
-    {
-        "type":2,
-        "q":"Translate the sentenece",
-        "answer":"Menin atym John",
-        "variant":["My You Is John Are Name",],
+        "variant":["Hala", "Barca", "Madrid", "Forca",]
     },
     {
         "type":1,
-        "q":"Choose a right picture",
+        "problem":"Choose a right picture",
+        "phrase":"I",
         "answer":"img3",
         "variant":[
             "img1",
@@ -23,8 +19,16 @@
         ],
     },
     {
+        "type":2,
+        "problem":"Translate the sentenece",
+        "phrase":"Menin atym John",
+        "answer":"My Name Is John",
+        "variant":["My" ,"You", "Is", "John", "Are", "Name",]
+    },
+    {
         "type":1,
-        "q":"Choose a right picture",
+        "problem":"Choose a right picture",
+        "phrase":"I",
         "answer":"img2",
         "variant":[
             "img1",

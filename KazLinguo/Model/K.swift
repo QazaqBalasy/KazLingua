@@ -10,12 +10,10 @@ import Foundation
 
 
 struct K {
-//    var module1:[Question] = [Question(question: "Translate the sentense", answer: "", rightAnswer:"I am john" )]
-//    
-//    func MakeModule(name:String) -> [Question] {
-//        if(name == "Module 1"){
-//            return module1;
-//        }
-//        return []
-//    }
+    private init(){}
+    static let restTime = 5;
+    static let rightAnswerExclamation = "Yeah!You did it"
+    static let wrongAnswerExclamation = "Don't worry!Next time!"
+    static let passedModuleImg = "checkmark"
+    static let failedModuleImg = "xmark"
 }

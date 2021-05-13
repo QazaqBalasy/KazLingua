@@ -23,6 +23,7 @@ class ResultViewController: UIViewController {
         super.viewWillAppear(animated)
         navigationController?.isNavigationBarHidden = true
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         label.text = lbTxt

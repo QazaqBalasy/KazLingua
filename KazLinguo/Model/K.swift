@@ -11,9 +11,16 @@ import Foundation
 
 struct K {
     private init(){}
-    static let restTime = 5;
+    let defaults = UserDefaults.standard
     static let rightAnswerExclamation = "Yeah!You did it"
     static let wrongAnswerExclamation = "Don't worry!Next time!"
     static let passedModuleImg = "checkmark"
     static let failedModuleImg = "xmark"
+    static var livePoints = 5;
+    
+    struct User {
+        static var email = ""
+        static var firstName = ""
+        static var lastName = ""
+    }
 }

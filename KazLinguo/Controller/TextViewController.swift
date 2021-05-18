@@ -17,9 +17,12 @@ class TextViewController: UIViewController,Answerable {
             tCollectionView.delegate = self
             let nib = UINib(nibName: "TextCollectionViewCell", bundle: nil)
             tCollectionView.register(nib, forCellWithReuseIdentifier: "TextCollectionViewCell")
-            //tCollectionView.collectionViewLayout = LeftAlignedCollectionViewFlowLayout()
+            let layout = LeftAlignedCollectionViewFlowLayout()
+            layout.estimatedItemSize = LeftAlignedCollectionViewFlowLayout.automaticSize
+            tCollectionView.collectionViewLayout = layout
         }
     }
+    
     @IBOutlet weak var phraseLabel: UILabel!
     
     var phrase = ""
@@ -42,7 +45,7 @@ class TextViewController: UIViewController,Answerable {
 
 
 //MARK: - Implement Collection View delegates
-extension TextViewController:UICollectionViewDelegate,UICollectionViewDataSource{
+extension TextViewController:UICollectionViewDelegate,UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     
     //count of sections
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -53,6 +56,7 @@ extension TextViewController:UICollectionViewDelegate,UICollectionViewDataSource
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if(section == 0){
             return l1.count
+            
         }else{
             return l2.count
         }
@@ -61,16 +65,17 @@ extension TextViewController:UICollectionViewDelegate,UICollectionViewDataSource
     
     //"reuse" cells
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TextCollectionViewCell", for: indexPath)
         
         if let viewCell = cell as? TextCollectionViewCell{
             if(indexPath.section == 0){
                 viewCell.label.text = l1[indexPath.item]
-                
             }else {
                 viewCell.label.text = l2[indexPath.item]
             }
         }
+        
         return cell
     }
     
@@ -95,7 +100,17 @@ extension TextViewController:UICollectionViewDelegate,UICollectionViewDataSource
     
     //margin , padding etc
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-       return UIEdgeInsets(top: 100, left: 15, bottom: 100, right: 15)
+        switch section {
+        case 0:
+            return UIEdgeInsets(top: 50, left: 17, bottom: 50, right: 17)
+        default:
+            return UIEdgeInsets(top: 70, left: 50, bottom: 20, right: 50)
+        }
+       
     }
+    
+    
+    
+    
     
 }

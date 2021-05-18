@@ -23,7 +23,7 @@ class ModuleViewController: UIViewController{
     private var questions = QuestionManager.getQuestions()
     private var counter:Int = 0
     private var answer = "";
-    private var pointsLeft = 5;
+    private var pointsLeft = K.livePoints
     private var status = false;
     
     
@@ -56,12 +56,17 @@ class ModuleViewController: UIViewController{
     
     @IBAction func closeButton(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
-        navigationController?.popToRootViewController(animated: true)
+        //navigationController?.popToRootViewController(animated: true)
+        //navigationController?.popToViewController(parent!, animated: true)
+        K.livePoints = pointsLeft
+        navigationController?.popViewController(animated: true)
     }
     
     
     @IBAction func nextButton(_ sender: Any) {
+        
         if(pointsLeft <= 0 || questions?.count ?? 0 <= counter + 1){
+            K.livePoints = pointsLeft
             self.performSegue(withIdentifier:"ToResultView", sender:self)
         }
         if(status){

@@ -24,7 +24,6 @@ class QuestionPictureViewController: UIViewController, Answerable {
     //@IBOutlet weak var label: UILabel!
     
     @IBAction func button1(_ sender: UIButton) {
-        print("dasdfad")
         answer = images[0]
     }
     @IBAction func button2(_ sender: Any) {

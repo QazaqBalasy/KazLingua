@@ -15,19 +15,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cloud.bolt" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="mvp-SV-Yay">
-                                <rect key="frame" x="87" y="384" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launch" translatesAutoresizingMaskIntoConstraints="NO" id="Hdr-BH-4rr">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" red="0.24858382339999999" green="0.5934191942" blue="0.69770485159999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="QazLinguo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pgc-XB-qvN">
-                                <rect key="frame" x="166" y="517" width="83" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="0.24858382339999999" green="0.5934191942" blue="0.69770485159999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Hdr-BH-4rr" firstAttribute="top" secondItem="cZD-gp-d8U" secondAttribute="topMargin" id="PDk-vr-Gwl"/>
+                            <constraint firstItem="ZMo-BG-Exd" firstAttribute="trailing" secondItem="Hdr-BH-4rr" secondAttribute="trailing" id="UgR-Df-3XZ"/>
+                            <constraint firstItem="Hdr-BH-4rr" firstAttribute="leading" secondItem="ZMo-BG-Exd" secondAttribute="leading" id="q0I-us-jV7"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="Hdr-BH-4rr" secondAttribute="bottom" id="x4X-61-QJs"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="ZMo-BG-Exd"/>
                     </view>
                 </viewController>
@@ -37,6 +36,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="cloud.bolt" catalog="system" width="64" height="64"/>
+        <image name="launch" width="351" height="510"/>
     </resources>
 </document>

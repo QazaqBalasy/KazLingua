@@ -28,10 +28,15 @@ class ResultViewController: UIViewController {
         super.viewDidLoad()
         label.text = lbTxt
         imageView.image = UIImage.init(systemName: img)
+        UserDefaults.standard.set(Date().timeIntervalSince1970, forKey: "time")
     }
 
     @IBAction func continueButtonPressed(_ sender: Any) {
-        navigationController?.popToRootViewController(animated: true)
+        //navigationController?.popToRootViewController(animated: true)
+//        navigationController?.popToViewController(parent!.parent!, animated: true)
+//        navigationController?.navigationController?.popToRootViewController(animated: true)
+        let viewControllers:[UIViewController] = navigationController!.viewControllers
+        navigationController!.popToViewController(viewControllers[viewControllers.count - 3], animated: true)
     }
     
 }

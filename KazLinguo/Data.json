@@ -5,7 +5,7 @@
         "problem":"Translate the sentenece",
         "phrase":"Alga Barca",
         "answer":"Forca Barca",
-        "variant":["Hala", "Barca", "Madrid", "Forca",]
+        "variant":["Hala", "Barca", "Madrid", "Forca","Hala", "Barca", "Madrid", "Forca",]
     },
     {
         "type":1,

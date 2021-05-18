@@ -3,10 +3,16 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5703EE38264DCACF00F54139 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5703EE37264DCACF00F54139 /* WelcomeViewController.swift */; };
+		5703EE3A264DCE2C00F54139 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5703EE39264DCE2C00F54139 /* RegisterViewController.swift */; };
+		5703EE3C264DCE3E00F54139 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5703EE3B264DCE3E00F54139 /* LoginViewController.swift */; };
+		5703EE3E264E08D900F54139 /* CustomBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5703EE3D264E08D900F54139 /* CustomBar.swift */; };
+		5703EE40264E1B9300F54139 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5703EE3F264E1B9300F54139 /* ProfileViewController.swift */; };
+		5703EE42264E347400F54139 /* TaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5703EE41264E347400F54139 /* TaskViewController.swift */; };
 		57076E6C261A0B3A000950E5 /* Answerable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57076E6B261A0B3A000950E5 /* Answerable.swift */; };
 		57076E6E261A1AA1000950E5 /* K.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57076E6D261A1AA0000950E5 /* K.swift */; };
 		57076E70261A1BA6000950E5 /* QuestionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57076E6F261A1BA6000950E5 /* QuestionData.swift */; };
@@ -29,11 +35,21 @@
 		579DF048261242AA007DE1CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 579DF046261242AA007DE1CC /* Main.storyboard */; };
 		579DF04A261242AB007DE1CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 579DF049261242AB007DE1CC /* Assets.xcassets */; };
 		579DF04D261242AB007DE1CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 579DF04B261242AB007DE1CC /* LaunchScreen.storyboard */; };
+		57EB280A26520068002F3414 /* LeftAlignedCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57EB280926520068002F3414 /* LeftAlignedCollectionViewFlowLayout.swift */; };
 		57F778CC2646051800FDB987 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F778CB2646051800FDB987 /* ResultViewController.swift */; };
 		57F97B92264D6D3300458914 /* ArticleBodyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F97B91264D6D3300458914 /* ArticleBodyVC.swift */; };
+		57F97B94264D807F00458914 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 57F97B93264D807F00458914 /* GoogleService-Info.plist */; };
+		9DC02513060EFE7AB9F4CDAC /* Pods_KazLinguo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CCCD74DC4B769F6FCDC6848 /* Pods_KazLinguo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		289E29FC317E86DA6195B907 /* Pods-KazLinguo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KazLinguo.release.xcconfig"; path = "Target Support Files/Pods-KazLinguo/Pods-KazLinguo.release.xcconfig"; sourceTree = "<group>"; };
+		5703EE37264DCACF00F54139 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		5703EE39264DCE2C00F54139 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		5703EE3B264DCE3E00F54139 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		5703EE3D264E08D900F54139 /* CustomBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBar.swift; sourceTree = "<group>"; };
+		5703EE3F264E1B9300F54139 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		5703EE41264E347400F54139 /* TaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewController.swift; sourceTree = "<group>"; };
 		57076E6B261A0B3A000950E5 /* Answerable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Answerable.swift; sourceTree = "<group>"; };
 		57076E6D261A1AA0000950E5 /* K.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = K.swift; sourceTree = "<group>"; };
 		57076E6F261A1BA6000950E5 /* QuestionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionData.swift; sourceTree = "<group>"; };
@@ -58,8 +74,12 @@
 		579DF049261242AB007DE1CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		579DF04C261242AB007DE1CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		579DF04E261242AB007DE1CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		57EB280926520068002F3414 /* LeftAlignedCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftAlignedCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
 		57F778CB2646051800FDB987 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		57F97B91264D6D3300458914 /* ArticleBodyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleBodyVC.swift; sourceTree = "<group>"; };
+		57F97B93264D807F00458914 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		5CCCD74DC4B769F6FCDC6848 /* Pods_KazLinguo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KazLinguo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E0F3C33825F0681BB305B93D /* Pods-KazLinguo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KazLinguo.debug.xcconfig"; path = "Target Support Files/Pods-KazLinguo/Pods-KazLinguo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9DC02513060EFE7AB9F4CDAC /* Pods_KazLinguo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,6 +117,7 @@
 				5725A8112634F1A2001111B7 /* TextCollectionViewCell.swift */,
 				5775B87C264C9A3A00C985E6 /* ArticleVCell.xib */,
 				5775B87B264C9A3A00C985E6 /* ArticleVCell.swift */,
+				5703EE3D264E08D900F54139 /* CustomBar.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -103,13 +125,18 @@
 		5765DB642614A11400092F9C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				579DF044261242AA007DE1CC /* ViewController.swift */,
+				5703EE37264DCACF00F54139 /* WelcomeViewController.swift */,
+				5703EE39264DCE2C00F54139 /* RegisterViewController.swift */,
+				5703EE3B264DCE3E00F54139 /* LoginViewController.swift */,
 				5765DB692615C29200092F9C /* ModuleViewController.swift */,
 				5765DB652614F4C600092F9C /* QuestionPictureViewController.swift */,
 				5765DB6B2616325E00092F9C /* TextViewController.swift */,
 				57F778CB2646051800FDB987 /* ResultViewController.swift */,
 				5775B879264C64EE00C985E6 /* ArticleViewController.swift */,
 				57F97B91264D6D3300458914 /* ArticleBodyVC.swift */,
+				5703EE3F264E1B9300F54139 /* ProfileViewController.swift */,
+				5703EE41264E347400F54139 /* TaskViewController.swift */,
+				579DF044261242AA007DE1CC /* ViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -119,6 +146,8 @@
 			children = (
 				579DF03F261242AA007DE1CC /* KazLinguo */,
 				579DF03E261242AA007DE1CC /* Products */,
+				CA44E21D8BC4323FAB45853C /* Pods */,
+				AACEF6F1C131530D6389CEB7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -137,12 +166,31 @@
 				5765DB632614A10A00092F9C /* View */,
 				5765DB622614A0FB00092F9C /* Model */,
 				579DF040261242AA007DE1CC /* AppDelegate.swift */,
+				57EB280926520068002F3414 /* LeftAlignedCollectionViewFlowLayout.swift */,
 				5725A8182637850D001111B7 /* Data.json */,
 				579DF042261242AA007DE1CC /* SceneDelegate.swift */,
 				579DF049261242AB007DE1CC /* Assets.xcassets */,
 				579DF04E261242AB007DE1CC /* Info.plist */,
+				57F97B93264D807F00458914 /* GoogleService-Info.plist */,
 			);
 			path = KazLinguo;
+			sourceTree = "<group>";
+		};
+		AACEF6F1C131530D6389CEB7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5CCCD74DC4B769F6FCDC6848 /* Pods_KazLinguo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CA44E21D8BC4323FAB45853C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E0F3C33825F0681BB305B93D /* Pods-KazLinguo.debug.xcconfig */,
+				289E29FC317E86DA6195B907 /* Pods-KazLinguo.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,9 +200,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 579DF051261242AB007DE1CC /* Build configuration list for PBXNativeTarget "KazLinguo" */;
 			buildPhases = (
+				F724E1AD65B12F8CEA7120A0 /* [CP] Check Pods Manifest.lock */,
 				579DF039261242AA007DE1CC /* Sources */,
 				579DF03A261242AA007DE1CC /* Frameworks */,
 				579DF03B261242AA007DE1CC /* Resources */,
+				7FA5786A339A6B0F17BE7B78 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -208,6 +258,7 @@
 				579DF04A261242AB007DE1CC /* Assets.xcassets in Resources */,
 				5775B87E264C9A3A00C985E6 /* ArticleVCell.xib in Resources */,
 				5725A8142634F1A2001111B7 /* TextCollectionViewCell.xib in Resources */,
+				57F97B94264D807F00458914 /* GoogleService-Info.plist in Resources */,
 				5725A8192637850D001111B7 /* Data.json in Resources */,
 				579DF048261242AA007DE1CC /* Main.storyboard in Resources */,
 				5765DB682614F4C600092F9C /* QuestionPictureViewController.xib in Resources */,
@@ -216,6 +267,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7FA5786A339A6B0F17BE7B78 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KazLinguo/Pods-KazLinguo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KazLinguo/Pods-KazLinguo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KazLinguo/Pods-KazLinguo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F724E1AD65B12F8CEA7120A0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KazLinguo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		579DF039261242AA007DE1CC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -223,18 +316,25 @@
 			files = (
 				57F778CC2646051800FDB987 /* ResultViewController.swift in Sources */,
 				57076E6C261A0B3A000950E5 /* Answerable.swift in Sources */,
+				57EB280A26520068002F3414 /* LeftAlignedCollectionViewFlowLayout.swift in Sources */,
 				579DF045261242AA007DE1CC /* ViewController.swift in Sources */,
 				5725A81B2638EFC8001111B7 /* QuestionModel.swift in Sources */,
+				5703EE3C264DCE3E00F54139 /* LoginViewController.swift in Sources */,
 				5765DB672614F4C600092F9C /* QuestionPictureViewController.swift in Sources */,
+				5703EE3E264E08D900F54139 /* CustomBar.swift in Sources */,
+				5703EE38264DCACF00F54139 /* WelcomeViewController.swift in Sources */,
 				57076E70261A1BA6000950E5 /* QuestionData.swift in Sources */,
+				5703EE42264E347400F54139 /* TaskViewController.swift in Sources */,
 				5765DB6A2615C29200092F9C /* ModuleViewController.swift in Sources */,
 				5775B87D264C9A3A00C985E6 /* ArticleVCell.swift in Sources */,
+				5703EE3A264DCE2C00F54139 /* RegisterViewController.swift in Sources */,
 				5775B87A264C64EE00C985E6 /* ArticleViewController.swift in Sources */,
 				57F97B92264D6D3300458914 /* ArticleBodyVC.swift in Sources */,
 				5725A8132634F1A2001111B7 /* TextCollectionViewCell.swift in Sources */,
 				579DF041261242AA007DE1CC /* AppDelegate.swift in Sources */,
 				57076E6E261A1AA1000950E5 /* K.swift in Sources */,
 				579DF043261242AA007DE1CC /* SceneDelegate.swift in Sources */,
+				5703EE40264E1B9300F54139 /* ProfileViewController.swift in Sources */,
 				5765DB6D2616325E00092F9C /* TextViewController.swift in Sources */,
 				5725A81D2638F2EC001111B7 /* QuestionManager.swift in Sources */,
 			);
@@ -378,6 +478,7 @@
 		};
 		579DF052261242AB007DE1CC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E0F3C33825F0681BB305B93D /* Pods-KazLinguo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -396,6 +497,7 @@
 		};
 		579DF053261242AB007DE1CC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 289E29FC317E86DA6195B907 /* Pods-KazLinguo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

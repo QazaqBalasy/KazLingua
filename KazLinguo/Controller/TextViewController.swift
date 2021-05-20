@@ -17,8 +17,8 @@ class TextViewController: UIViewController,Answerable {
             tCollectionView.delegate = self
             let nib = UINib(nibName: "TextCollectionViewCell", bundle: nil)
             tCollectionView.register(nib, forCellWithReuseIdentifier: "TextCollectionViewCell")
-            let layout = LeftAlignedCollectionViewFlowLayout()
-            layout.estimatedItemSize = LeftAlignedCollectionViewFlowLayout.automaticSize
+            let layout = UICollectionViewFlowLayout()
+            layout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
             tCollectionView.collectionViewLayout = layout
         }
     }
@@ -52,11 +52,11 @@ extension TextViewController:UICollectionViewDelegate,UICollectionViewDataSource
         return 2;
     }
     
+    
     //return number of items in sections
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if(section == 0){
             return l1.count
-            
         }else{
             return l2.count
         }
@@ -102,9 +102,10 @@ extension TextViewController:UICollectionViewDelegate,UICollectionViewDataSource
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         switch section {
         case 0:
-            return UIEdgeInsets(top: 50, left: 17, bottom: 50, right: 17)
+            return UIEdgeInsets(top: 50, left: 7, bottom: 50, right: 7)
         default:
             return UIEdgeInsets(top: 70, left: 50, bottom: 20, right: 50)
+            
         }
        
     }

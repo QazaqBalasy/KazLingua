@@ -82,16 +82,5 @@ class QuestionPictureViewController: UIViewController, Answerable {
     
 }
 
-//extension UIImage {
-//    // Instantiates a `UIImage` from the `ImageName` provided
-//    convenience init(named imageName: ImageName) {
-//        self.init(named: imageName.rawValue)!
-//    }
-//    
-//    enum ImageName: String {
-//        case imageName = "ImageName"
-//        case anotherImage = "Image2"
-//    }
-//}
 
 

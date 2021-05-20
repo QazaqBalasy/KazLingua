@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ModuleViewController: UIViewController{
+class ModuleViewController: UIViewController,CAAnimationDelegate{
     
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var progressBar: UIProgressView!
@@ -16,6 +16,7 @@ class ModuleViewController: UIViewController{
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var result: UILabel!
     @IBOutlet weak var directiveLabel: UILabel!
+    @IBOutlet weak var resultView: UIView!
     
     private var chooseRightPictureVC:QuestionPictureViewController
     private var arrangeTextVC:TextViewController
@@ -43,7 +44,7 @@ class ModuleViewController: UIViewController{
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        navigationController?.isNavigationBarHidden = true
+        
     }
     
     override func viewDidLoad() {
@@ -51,6 +52,14 @@ class ModuleViewController: UIViewController{
         progressBar.progress = 0.0
         result.isHidden = true
         updateSubview()
+        navigationController?.isNavigationBarHidden = true
+        navigationController?.isToolbarHidden = true
+        navigationController?.setToolbarHidden(true, animated: false)
+        containerView.layer.cornerRadius = containerView.frame.height / 30
+        containerView.layer.borderWidth = 2
+        containerView.layer.borderColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
+        containerView.layer.masksToBounds = true
+//        containerView.layer.backgroundColor = #colorLiteral(red: 0.7764705882, green: 1, blue: 0.9450980392, alpha: 1)
     }
     
     
@@ -64,7 +73,7 @@ class ModuleViewController: UIViewController{
     
     
     @IBAction func nextButton(_ sender: Any) {
-        
+        animate()
         if(pointsLeft <= 0 || questions?.count ?? 0 <= counter + 1){
             K.livePoints = pointsLeft
             self.performSegue(withIdentifier:"ToResultView", sender:self)
@@ -112,6 +121,25 @@ class ModuleViewController: UIViewController{
     
     
     func updateProgress() {
+//        let animation = CABasicAnimation(keyPath: "backgroundColor")
+//        animation.fromValue = UIColor.white.cgColor
+//        animation.toValue = UIColor.green.cgColor
+//        animation.duration = 1
+//        animation.beginTime = CACurrentMediaTime() + 0.3
+//        resultView.layer.add(animation, forKey: "backgroundColor")
+        
+//        if self.view.backgroundColor == UIColor.red {
+//           UIView.animate(withDuration: 2) {
+//              self.view.backgroundColor = UIColor.blue
+//           }
+//        } else {
+//           UIView.animate(withDuration: 2) {
+//              self.view.backgroundColor = UIColor.red
+//           }
+//        }
+        
+        
+        
         result.isHidden = false
         if(isAnswerRight()){
             result.text = "Right!"
@@ -164,8 +192,9 @@ class ModuleViewController: UIViewController{
         // Add Child View Controller
         addChild(viewController)
 
-        // Add Child View as Subview
-        containerView.addSubview(viewController.view)
+        UIView.transition(with: self.view, duration: 0.25, options: [.transitionFlipFromRight], animations: {
+            self.containerView.addSubview(viewController.view)
+        }, completion: nil)
 
         // Configure Child View
         viewController.view.frame = CGRect(
@@ -186,12 +215,23 @@ class ModuleViewController: UIViewController{
         viewController.willMove(toParent: nil)
 
         // Remove Child View From Superview
-        viewController.view.removeFromSuperview()
+        UIView.transition(with: self.view, duration: 0.25, options: [.transitionFlipFromRight], animations: {
+            viewController.view.removeFromSuperview()
+        }, completion: nil)
 
         // Notify Child View Controller
         viewController.removeFromParent()
     }
     
+    
+    func animate()   {
+        let color = UIColor.init(red: 74/255, green: 169/255, blue: 108/255, alpha: 1.0)
+        UIView.animate(withDuration: 0.7, delay: 0, options: [.transitionCurlUp], animations: {
+            self.resultView.backgroundColor = color
+        }, completion: nil)
+        
+        
+    }
     
 }
 

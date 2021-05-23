@@ -7,11 +7,13 @@
 //
 
 import Foundation
+import Firebase
 class QuestionManager{
-    
+    static let db = Firestore.firestore()
+
     static func parseJSON() ->  [Question]?{
         let jsonDecoder = JSONDecoder()
-        if let data = readLocalFile(forName: "Data"){
+        if let data = readLocalFile(forName: "data2"){
             do{
                 let decodedData = try jsonDecoder.decode(QuestionData.self, from: data)
                 return decodedData.question
@@ -51,4 +53,33 @@ class QuestionManager{
         return nil
         
     }
+    
+    
+    static func getQuestionsFromDatabase() -> [QuestionModel]?{
+        let docRef = db.collection("chapters").document("chapter1")
+        var questionModel:[QuestionModel] = []
+        docRef.getDocument { (document, error) in
+            if let document = document, document.exists {
+                let result = document.data()
+                if let itData = result?["topic1"] as? [String:Any]{
+                    for (_,value) in itData{
+                        if let question = value as? [String:Any]{
+                            questionModel.append(QuestionModel.init(questionData: question))
+                        }
+                    }
+                }
+                
+            } else {
+                print("Document does not exist")
+            }
+        }
+        if(!questionModel.isEmpty){
+            
+            return questionModel
+        }
+        return nil
+    }
+
 }
+
+

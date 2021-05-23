@@ -39,15 +39,18 @@ class WelcomeViewController: ViewController {
         
         docRef.getDocument { (document, error) in
             if let document = document, document.exists {
-               // let dataDescription = document.data().map(String.init(describing:)) ?? "nil"
+                //let dataDescription = document.data().map(String.init(describing:)) ?? "nil"
                 let result = document.data()
                 //print(result)
                 if let itData = result?["topic1"] as? [String: Any]{
-                    //print(itData)
+                    print(itData)
+                    
                     if let question = itData["question1"] as? [String:Any]{
-                     //print(question)
+                     print(question)
+                        var que = QuestionModel(questionData: question)
+                        //print(que.type)
                         if let field = question["phrase"] as? String{
-                            print(field)
+                            //print(field)
                         }
                     }
                 }

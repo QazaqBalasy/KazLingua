@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+let dispatch = DispatchGroup()
 class ModuleViewController: UIViewController,CAAnimationDelegate{
     
     @IBOutlet weak var containerView: UIView!
@@ -44,22 +44,33 @@ class ModuleViewController: UIViewController,CAAnimationDelegate{
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        pointsLeft = K.livePoints
+        
+        
+        
         
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         progressBar.progress = 0.0
         result.isHidden = true
+        
         updateSubview()
+        
         navigationController?.isNavigationBarHidden = true
         navigationController?.isToolbarHidden = true
         navigationController?.setToolbarHidden(true, animated: false)
+        
         containerView.layer.cornerRadius = containerView.frame.height / 30
         containerView.layer.borderWidth = 2
         containerView.layer.borderColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
         containerView.layer.masksToBounds = true
 //        containerView.layer.backgroundColor = #colorLiteral(red: 0.7764705882, green: 1, blue: 0.9450980392, alpha: 1)
+        
+//        var questionModel:[QuestionModel] = []
+//        self.questions =  QuestionManager.getQuestionsFromDatabase()
     }
     
     
@@ -82,12 +93,12 @@ class ModuleViewController: UIViewController,CAAnimationDelegate{
             result.isHidden = true
             counter+=1
             updateSubview()
-            print("Status:1")
+            //print("Status:1")
             status = false
         }else if(!status){
             updateProgress()
             status = true
-            print("Status:2")
+            //print("Status:2")
             result.isHidden = false
         }
         
@@ -121,24 +132,6 @@ class ModuleViewController: UIViewController,CAAnimationDelegate{
     
     
     func updateProgress() {
-//        let animation = CABasicAnimation(keyPath: "backgroundColor")
-//        animation.fromValue = UIColor.white.cgColor
-//        animation.toValue = UIColor.green.cgColor
-//        animation.duration = 1
-//        animation.beginTime = CACurrentMediaTime() + 0.3
-//        resultView.layer.add(animation, forKey: "backgroundColor")
-        
-//        if self.view.backgroundColor == UIColor.red {
-//           UIView.animate(withDuration: 2) {
-//              self.view.backgroundColor = UIColor.blue
-//           }
-//        } else {
-//           UIView.animate(withDuration: 2) {
-//              self.view.backgroundColor = UIColor.red
-//           }
-//        }
-        
-        
         
         result.isHidden = false
         if(isAnswerRight()){
@@ -226,11 +219,9 @@ class ModuleViewController: UIViewController,CAAnimationDelegate{
     
     func animate()   {
         let color = UIColor.init(red: 74/255, green: 169/255, blue: 108/255, alpha: 1.0)
-        UIView.animate(withDuration: 0.7, delay: 0, options: [.transitionCurlUp], animations: {
+        UIView.animate(withDuration: 0.25, delay: 0, options: [.transitionCurlUp], animations: {
             self.resultView.backgroundColor = color
         }, completion: nil)
-        
-        
     }
     
 }

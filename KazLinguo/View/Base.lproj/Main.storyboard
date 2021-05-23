@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--Learning-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="TaskViewController" customModule="KazLinguo" customModuleProvider="target" sceneMemberID="viewController">
@@ -15,50 +15,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9H0-gn-J6G">
-                                <rect key="frame" x="20" y="132" width="73" height="69"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Pronouns">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="modulePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IaR-uJ-vqT"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VVr-Z7-Mn5">
-                                <rect key="frame" x="171" y="131" width="73" height="69"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Greetings">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="modulePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2pi-QW-3M7"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tvY-p5-EBH">
-                                <rect key="frame" x="321" y="132" width="73" height="69"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="First Meet">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="modulePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bDe-XV-bRi"/>
-                                </connections>
-                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="oSs-CB-bdX">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" red="0.24858382339999999" green="0.5934191942" blue="0.69770485159999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="sectionIndexBackgroundColor" red="0.31450062989999999" green="0.6469395161" blue="0.85952222349999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </tableView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="0.24858382339999999" green="0.5934191942" blue="0.69770485159999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="oSs-CB-bdX" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="XXY-A2-NvT"/>
+                            <constraint firstItem="oSs-CB-bdX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="sgZ-fD-o48"/>
+                            <constraint firstItem="oSs-CB-bdX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ux2-fz-JIL"/>
+                            <constraint firstItem="oSs-CB-bdX" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="vJm-X9-nLY"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" image="learning" selectedImage="learning" id="vbC-Zu-elP"/>
+                    <tabBarItem key="tabBarItem" title="Learning" image="learning" selectedImage="learning" id="vbC-Zu-elP"/>
                     <navigationItem key="navigationItem" id="wUZ-wu-cCZ"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="tableView" destination="oSs-CB-bdX" id="Fbr-sK-KF7"/>
                         <segue destination="1RK-It-CjN" kind="show" identifier="ToModuleView" id="EMF-id-qb5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-991" y="-12"/>
+            <point key="canvasLocation" x="-991.304347826087" y="-12.053571428571429"/>
         </scene>
         <!--Profile-->
         <scene sceneID="dCd-6K-Ixb">
@@ -343,7 +325,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DzN-WE-b5n" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4101.449275362319" y="255.80357142857142"/>
+            <point key="canvasLocation" x="-4101" y="433"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="OZo-8G-2t3">
@@ -419,7 +401,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ic9-Tc-1FM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4101.449275362319" y="1206.6964285714284"/>
+            <point key="canvasLocation" x="-4101" y="1128"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="kQk-r8-qXx">

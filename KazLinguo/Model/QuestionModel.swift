@@ -15,3 +15,14 @@ struct QuestionModel {
     let variant:[String]
     
 }
+
+
+extension QuestionModel{
+    init(questionData: [String:Any]) {
+        type = questionData["type"] as? Int ?? -1
+        problem = questionData["problem"] as? String ?? " "
+        phrase = questionData["phrase"] as? String ?? " "
+        answer = questionData["answer"] as? String ?? " "
+        variant = questionData["variant"] as? [String] ?? []
+    }
+}
